@@ -2,9 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>EVDrive Logger - 認証完了</title>
+<title>EVDrive Logger</title>
 </head>
 <body>
-<p>認証が完了しました。アプリに戻ってください。</p>
+<p>認証中...</p>
+<script>
+  // URLのパラメータをそのままアプリに転送
+  var params = window.location.search;
+  window.location.href = "evdrivelogger://callback" + params;
+</script>
 </body>
 </html>
